@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_getEndToEndOf="parent">
+
+        <TextView
+            android:id="@+id/tvVersionAndroid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Versión Android"
+            android:textSize="16sp"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/tvConexion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Estado Conexión"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/tvLevelBatery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nivel Batería: 0%" />
+
+        <ProgressBar
+            android:id="@+id/pbLevelBatery"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:layout_marginBottom="20dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginBottom="20dp"/>
+
+        <EditText
+            android:id="@+id/etFileName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre del archivo (ej: nota1)"
+            android:inputType="text"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/btnSaveFile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guardar Archivo"
+            android:layout_marginBottom="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnOnFlash"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Encender Flash"
+                android:layout_marginEnd="5dp"/>
+
+            <Button
+                android:id="@+id/btnOffFlash"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Apagar Flash" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
